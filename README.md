@@ -62,7 +62,7 @@ Options:
 - [Website](https://doriku.io)
 - [Documentation](https://doriku.io/docs)
 - [Console](https://doriku.io/console)
-- [Issues](https://github.com/Deiamor/doriku.cli/issues)
+- [Issues](https://github.com/doriku-io/doriku.cli/issues)
 
 ## License
 
