@@ -1,30 +1,41 @@
+<div align="center">
+
 # @doriku/cli
 
-Set up [Doriku](https://doriku.io) MCP configuration and Claude Code hooks in one command.
+**Set up [Doriku](https://doriku.io) MCP configuration and Claude Code hooks in one command.**
+
+[![npm version](https://img.shields.io/npm/v/@doriku/cli.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@doriku/cli)
+[![license](https://img.shields.io/npm/l/@doriku/cli.svg?style=flat-square)](LICENSE)
+[![node](https://img.shields.io/node/v/@doriku/cli.svg?style=flat-square)](package.json)
+
+</div>
+
+---
+
+## Quick Start
+
+```bash
+npx @doriku/cli setup
+```
+
+That's it. Your MCP server config and Claude Code hooks are ready.
 
 ## Installation
 
 ```bash
+# Run directly (no install needed)
 npx @doriku/cli setup
-```
 
-Or install globally:
-
-```bash
+# Or install globally
 npm install -g @doriku/cli
 doriku setup
 ```
 
-## Quick Start
+## Setup Flow
 
 1. Sign in at [doriku.io/console](https://doriku.io/console/login) and create an API key
-2. Run the setup command:
-
-```bash
-npx @doriku/cli setup
-```
-
-3. Enter your API key when prompted — done! Your AI tools can now sync via Doriku.
+2. Run the setup command
+3. Enter your API key when prompted — done!
 
 ### Non-Interactive Mode
 
@@ -32,7 +43,15 @@ npx @doriku/cli setup
 npx @doriku/cli setup --token drk_live_your_key_here --yes
 ```
 
-## CLI Options
+## What It Does
+
+| Step | Description |
+|------|-------------|
+| **MCP Configuration** | Writes `.mcp.json` with your Doriku server config (merges with existing servers) |
+| **Claude Code Hooks** | Installs hooks in `~/.claude/settings.json` for automatic task sync |
+| **Connection Test** | Verifies your API key works against the Doriku API |
+
+## CLI Reference
 
 ```
 Usage: doriku <command> [options]
@@ -51,18 +70,11 @@ Options:
   --version, -v      Show version
 ```
 
-## What It Does
-
-1. **MCP Configuration** — Writes `.mcp.json` with your Doriku server config (merges with existing servers)
-2. **Claude Code Hooks** — Installs hooks in `~/.claude/settings.json` for automatic task sync
-3. **Connection Test** — Verifies your API key works against the Doriku API
-
 ## Links
 
 - [Website](https://doriku.io)
 - [Documentation](https://doriku.io/docs)
 - [Console](https://doriku.io/console)
-- [Issues](https://github.com/doriku-io/doriku.cli/issues)
 
 ## License
 
