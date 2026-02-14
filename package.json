@@ -1,0 +1,33 @@
+{
+  "name": "@doriku/cli",
+  "version": "0.1.1",
+  "description": "Doriku CLI - Setup MCP configuration and Claude Code hooks",
+  "type": "module",
+  "bin": {
+    "doriku": "src/cli.mjs"
+  },
+  "files": [
+    "src/**/*.mjs",
+    "assets/**"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "doriku",
+    "mcp",
+    "claude",
+    "ai",
+    "task-management"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doriku-io/doriku.cli.git"
+  },
+  "homepage": "https://doriku.io",
+  "bugs": {
+    "url": "https://github.com/doriku-io/doriku.cli/issues"
+  },
+  "author": "Doriku <support@doriku.io>"
+}
