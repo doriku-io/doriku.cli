@@ -2,7 +2,7 @@
 
 # @doriku/cli
 
-**Set up [Doriku](https://doriku.io) MCP configuration and Claude Code hooks in one command.**
+**Set up [Doriku](https://doriku.io) MCP configuration and Claude Code hooks in one command. Doriku is an agent coordination and execution control plane for AI-native dev teams.**
 
 [![npm version](https://img.shields.io/npm/v/@doriku/cli.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@doriku/cli)
 [![license](https://img.shields.io/npm/l/@doriku/cli.svg?style=flat-square)](LICENSE)
@@ -26,7 +26,16 @@ Recommended next workflow (AI-friendly):
 3. Log progress
 4. Update task status/result
 
-See docs for MCP/API contracts and examples: [doriku.io/docs](https://doriku.io/docs)
+Recommended first-value goal (15 minutes):
+1. Connect MCP successfully (connection test passes)
+2. Create one real engineering task
+3. Generate one summary snapshot
+4. Invite one teammate to review the shared state
+
+See docs for MCP/API contracts, first-value onboarding, and recipe examples:
+- [Documentation home](https://doriku.io/docs)
+- [15-minute first value playbook](https://doriku.io/docs#first-value-loop)
+- [Use case recipes](https://doriku.io/docs#use-cases)
 
 ## Installation
 
@@ -60,6 +69,12 @@ npx @doriku/cli setup --token drk_live_your_key_here --yes
 | **Connection Test** | Verifies your API key works against the Doriku API |
 
 Doriku also exposes AI-friendly MCP/REST contracts (structured MCP errors, machine-readable REST error fields, and a core OpenAPI spec) to make agent retries and recovery easier.
+
+## Who This Is For
+
+- AI-native dev teams (2-20) using Claude Code, Cursor, or API agents in parallel
+- Teams that need approvals, auditability, and operational visibility across agent work
+- Teams outgrowing spreadsheets / Notion / Slack for agent coordination
 
 ## CLI Reference
 
