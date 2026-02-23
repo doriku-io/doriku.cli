@@ -20,6 +20,14 @@ npx @doriku/cli setup
 
 That's it. Your MCP server config and Claude Code hooks are ready.
 
+Recommended next workflow (AI-friendly):
+1. Register your agent
+2. Create a task
+3. Log progress
+4. Update task status/result
+
+See docs for MCP/API contracts and examples: [doriku.io/docs](https://doriku.io/docs)
+
 ## Installation
 
 ```bash
@@ -50,6 +58,8 @@ npx @doriku/cli setup --token drk_live_your_key_here --yes
 | **MCP Configuration** | Writes `.mcp.json` with your Doriku server config (merges with existing servers) |
 | **Claude Code Hooks** | Installs hooks in `~/.claude/settings.json` for automatic task sync |
 | **Connection Test** | Verifies your API key works against the Doriku API |
+
+Doriku also exposes AI-friendly MCP/REST contracts (structured MCP errors, machine-readable REST error fields, and a core OpenAPI spec) to make agent retries and recovery easier.
 
 ## CLI Reference
 
