@@ -22,6 +22,10 @@ if [[ -z "$SESSION_ID" ]]; then
   exit 0
 fi
 
+if [[ ! "$SESSION_ID" =~ ^[a-zA-Z0-9_-]+$ ]]; then
+  exit 0
+fi
+
 MAPPING_FILE="${DORIKU_MAPPING_DIR}/${SESSION_ID}.json"
 
 if [[ ! -f "$MAPPING_FILE" ]]; then
