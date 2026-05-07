@@ -1,7 +1,7 @@
 {
   "name": "@doriku/cli",
-  "version": "0.1.1",
-  "description": "Doriku CLI - Setup MCP configuration and Claude Code hooks",
+  "version": "0.2.0",
+  "description": "Doriku CLI — workflow, lock policy, and cost-cap commands for the Doriku orchestration platform (MCP-native governance plane for multi-IDE coding agents).",
   "type": "module",
   "bin": {
     "doriku": "src/cli.mjs"
@@ -18,7 +18,10 @@
     "mcp",
     "claude",
     "ai",
-    "task-management"
+    "task-management",
+    "workflow",
+    "governance",
+    "orchestration"
   ],
   "license": "MIT",
   "repository": {

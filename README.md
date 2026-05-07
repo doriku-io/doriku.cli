@@ -2,7 +2,7 @@
 
 # @doriku/cli
 
-**Set up [Doriku](https://doriku.io) MCP configuration and Claude Code hooks in one command. Doriku is an agent coordination and execution control plane for AI-native dev teams.**
+**The CLI for [Doriku](https://doriku.io) — an MCP-native governance plane for multi-IDE coding agents. Set up MCP config and Claude Code hooks, then manage workflows, file-lock policies, and cost caps from the terminal.**
 
 [![npm version](https://img.shields.io/npm/v/@doriku/cli.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@doriku/cli)
 [![license](https://img.shields.io/npm/l/@doriku/cli.svg?style=flat-square)](LICENSE)
@@ -67,14 +67,17 @@ npx @doriku/cli setup --token drk_live_your_key_here --yes
 | **MCP Configuration** | Writes `.mcp.json` with your Doriku server config (merges with existing servers) |
 | **Claude Code Hooks** | Installs hooks in `~/.claude/settings.json` for automatic task sync |
 | **Connection Test** | Verifies your API key works against the Doriku API |
+| **Workflow Management** | List, run, monitor, and cancel multi-step agent workflows |
+| **Lock Policies** | Define and inspect file-lock policies to prevent agent conflicts |
+| **Cost Caps** | View and set workspace-level daily token spend limits |
 
 Doriku also exposes AI-friendly MCP/REST contracts (structured MCP errors, machine-readable REST error fields, and a core OpenAPI spec) to make agent retries and recovery easier.
 
 ## Who This Is For
 
-- AI-native dev teams (2-20) using Claude Code, Cursor, or API agents in parallel
+- Solo developers and teams using Claude Code, Cursor, or Windsurf in parallel
+- Anyone who needs governance (file locks, cost caps, audit trails) across multi-IDE agents
 - Teams that need approvals, auditability, and operational visibility across agent work
-- Teams outgrowing spreadsheets / Notion / Slack for agent coordination
 
 ## CLI Reference
 
@@ -82,7 +85,10 @@ Doriku also exposes AI-friendly MCP/REST contracts (structured MCP errors, machi
 Usage: doriku <command> [options]
 
 Commands:
-  setup    Configure MCP and Claude Code hooks
+  setup                     Configure MCP and Claude Code hooks
+  workflow <subcommand>     Manage workflow definitions and runs
+  lock <subcommand>         Manage file-lock policies
+  cost <subcommand>         Manage workspace cost caps
 
 Options:
   --token <key>      API key (drk_live_...)
@@ -93,6 +99,30 @@ Options:
   --api-url <url>    API base URL (default: https://api.doriku.io)
   --help, -h         Show help
   --version, -v      Show version
+```
+
+### Workflow Subcommands
+
+```bash
+doriku workflow list                 # List all workflow definitions
+doriku workflow run <slug>           # Start a workflow run
+doriku workflow status <runId>       # Show run status and step summary
+doriku workflow logs <runId>         # Show step-level timeline
+doriku workflow cancel <runId>       # Cancel an in-progress run
+```
+
+### Lock Subcommands
+
+```bash
+doriku lock list                     # List all file-lock policies
+doriku lock policy                   # Define a new policy (interactive)
+```
+
+### Cost Subcommands
+
+```bash
+doriku cost status                   # Show current cost cap config and today's usage
+doriku cost set                      # Set daily token cap (interactive)
 ```
 
 ## Links
