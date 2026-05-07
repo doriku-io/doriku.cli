@@ -1,6 +1,6 @@
 {
   "name": "@doriku/cli",
-  "version": "0.2.0",
+  "version": "0.1.2",
   "description": "Doriku CLI — workflow, lock policy, and cost-cap commands for the Doriku orchestration platform (MCP-native governance plane for multi-IDE coding agents).",
   "type": "module",
   "bin": {
